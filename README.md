@@ -14,7 +14,6 @@ A full-stack MERN Website developed over a three-month period. The structure for
 
 **Frontend:**  Full-stack MERN app with a React frontend and user interface for CRUD performed on the existing backend
 
-#
 
 ## Available Scripts
 In the project directory, you can run:
