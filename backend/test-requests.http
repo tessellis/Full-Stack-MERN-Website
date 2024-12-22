@@ -1,0 +1,94 @@
+### CREATE five documents.
+POST http://localhost:3000/experiences HTTP/1.1
+content-type: application/json
+
+{
+        "position": "Hostess Server",
+        "duration": 1,
+        "skills": "Communication", 
+        "startDate": "01/01/17",
+        "endData": "09/01/17"
+}
+
+
+### CREATE 2
+POST http://localhost:3000/experiences HTTP/1.1
+content-type: application/json
+
+{
+        "position": "Content Writer",
+        "duration": 1,
+        "skills": "Search Engine Optimization", 
+        "startDate": "11/01/17",
+        "endData": "12/01/18"
+}
+
+### CREATE 3
+POST http://localhost:3000/experiences HTTP/1.1
+content-type: application/json
+
+{
+        "position": "Social Media Intern",
+        "duration": 2,
+        "skills": "Social Media Optimization and Marketing", 
+        "startDate": "12/01/18",
+        "endData": "07/01/20"
+}
+
+### CREATE 4
+POST http://localhost:3000/experiences HTTP/1.1
+content-type: application/json
+
+{
+        "position": "Social Media Manager",
+        "duration": 1,
+        "skills": "Corporate Social Media", 
+        "startDate": "07/01/20",
+        "endData": "07/01/21"
+}
+
+### CREATE 5
+POST http://localhost:3000/experiences HTTP/1.1
+content-type: application/json
+
+{
+        "position": "Online Spanish Tutor",
+        "duration": 4,
+        "skills": "Spanish Education and Curriculum Development", 
+        "startDate": "07/01/21",
+        "endData": "06/01/24"
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/experiences HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/experiences/6653c10d81016b6ad7a29b8c HTTP/1.1
+
+
+### UPDATE one document's year, by ID.
+### Replace the ID in the following request with one that exists
+### and update the skills and end date:
+PUT http://localhost:3000/experiences/6653be8680a2bd9d6ea389d4  HTTP/1.1
+content-type: application/json
+
+{
+        "position": "Online Spanish Tutor",
+        "duration": 4,
+        "skills": "Adult Education and Curriculum Development", 
+        "startDate": "07/01/21",
+        "endData": "03/02/24"
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/experiences/6653be8680a2bd9d6ea389d4 HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/experiences HTTP/1.1
+
